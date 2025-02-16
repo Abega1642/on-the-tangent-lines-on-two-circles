@@ -1,0 +1,9 @@
+@book{Aristarchus1572,
+  author    = {Aristarchus of Samos},
+  title     = {On the Sizes and Distances of the Sun and Moon},
+  translator = {Federico Commandino},
+  year      = {1572},
+  publisher = {Camillus Francischinus},
+  address   = {Pesaro},
+  note      = {With explanations by Pappus Alexandrinus, Latin translation and commentary by Federico Commandino}
+}
