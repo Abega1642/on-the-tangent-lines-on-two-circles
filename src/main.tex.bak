@@ -3,6 +3,9 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{tikz}
+
+\newtheorem{proposition}{Proposition}
 
 \author{Abegà Razafindratelo}
 
@@ -17,6 +20,7 @@ This article examines the geometric problem of finding two lines that are simult
 The inspiration for this research comes from \textit{Aristarchus of Samos}' work \textit{On the Sizes and Distances of the Sun and Moon}\cite{Aristarchus1572}. While studying this treatise to understand celestial distances, I realized that its geometric principles could be applied to a mechanical problem I was investigating. This connection led to the present study on common tangents to two circles, demonstrating how ancient mathematical insights can inform modern geometric inquiries.
 
 \include{intro}
+\include{part-i}
 
 \bibliographystyle{plain}
 \bibliography{ref}
