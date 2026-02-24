@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsthm}
+\usepackage{tkz-euclide}
+\usepackage{standalone}
+
+\newtheorem{proposition}{Proposition}
+
+\begin{document}
+
+\section{On the first category of the tangent lines on two circles}
+
+Here, the purpose is to determine both the exact contact point of the
+tangents of the two circle and the intersection point of those tangent lines.
+
+\begin{proposition}
+  Let $(C_1)$ and $(C_2)$ two circles such as given in the following
+  figure. Therefore :
+  \begin{equation}
+    \gamma = \frac{\pi}{2} - \arcsin{\left(\frac{r_1 - r_2}{d}\right)}
+  \end{equation}
+\end{proposition}
+
+\begin{center}
+  \input{figures/fig-1}
+\end{center}
+
+\begin{proof}
+  Let's focus on the triangle created by the tagent lines to those circles :
+
+  \begin{center}
+    \input{figures/fig-2}
+  \end{center}
+\end{proof}
+
+\end{document}

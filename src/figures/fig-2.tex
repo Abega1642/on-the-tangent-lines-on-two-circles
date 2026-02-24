@@ -1,0 +1,51 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2]
+
+  % --- Points ---
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (0,4);
+  \coordinate (C) at (3,0);
+  \coordinate (D) at (3,2.5);
+  \coordinate (E) at (8,0);
+
+  % --- Base line ---
+  \draw (0,0) -- (8,0);
+
+  % --- Vertical radii ---
+  \draw (A) -- (B);
+  \draw (C) -- (D);
+
+  % --- Tangent line ---
+  \draw[thick] (B) -- (E);
+
+  % --- Right angle marks ---
+  \draw (0,0) rectangle (0.35,0.35);
+  \draw (3,0) rectangle (3.35,0.35);
+
+  % --- Angle gamma left ---
+  \draw (B) ++(270:0.6) arc (270:330:0.6);
+  \node at (0.4,3.1) {$\gamma$};
+
+  % --- Angle gamma right ---
+  \draw (D) ++(270:0.5) arc (270:330:0.5);
+  \node at (3.4,1.8) {$\gamma$};
+
+  % --- Angle alpha ---
+  \draw (E) ++(145:0.5) arc (130:222:0.25);
+  \node at (6.7,0.29) {$\dfrac{\alpha}{2}$};
+
+  % --- Labels ---
+  \node[left]  at ($(A)!0.5!(B)$) {$r_1$};
+  \node[right] at ($(C)!0.5!(D)$) {$r_2$};
+
+  \node at (1.9,3.5) {$d$};
+  \node at (5.9,1.5) {$d'$};
+
+\end{tikzpicture}
+
+\end{document}
