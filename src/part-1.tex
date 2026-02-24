@@ -1,24 +1,32 @@
 \documentclass{article}
+
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath, amsthm}
+\usepackage{amsmath,amsthm,amssymb}
 \usepackage{tkz-euclide}
 \usepackage{standalone}
+\usepackage{microtype}
 
 \newtheorem{proposition}{Proposition}
 
 \begin{document}
 
-\section{On the first category of the tangent lines on two circles}
+\section{First Category of Common Tangents to Two Circles}
 
-Here, the purpose is to determine both the exact contact point of the
-tangents of the two circle and the intersection point of those tangent lines.
+The purpose of this section is to determine both the exact points of
+tangency of the common external tangents to two circles and the
+intersection point of these tangent lines.
 
 \begin{proposition}
-  Let $(C_1)$ and $(C_2)$ two circles such as given in the following
-  figure. Therefore :
-  \begin{equation}
-    \gamma = \frac{\pi}{2} - \arcsin{\left(\frac{r_1 - r_2}{d}\right)}
-  \end{equation}
+  Let $(C_1)$ and $(C_2)$ be two circles arranged as in the figure
+  below with radius $r_1$ and $r_2$ respectively.
+  Then the angle $\gamma$ formed by the tangent and the radius satisfies
+  \[
+    \gamma
+    =
+    \frac{\pi}{2}
+    -
+    \arcsin\!\left(\frac{r_1 - r_2}{d}\right).
+  \]
 \end{proposition}
 
 \begin{center}
@@ -26,11 +34,78 @@ tangents of the two circle and the intersection point of those tangent lines.
 \end{center}
 
 \begin{proof}
-  Let's focus on the triangle created by the tagent lines to those circles :
+  We focus on the triangle formed by the common external tangents,
+  shown in the next figure.
 
   \begin{center}
     \input{figures/fig-2}
   \end{center}
+
+  \paragraph{Similar triangles (Thales' theorem).}
+
+  From the similarity of the triangles, we obtain
+  \[
+    \frac{d'}{r_2} = \frac{d + d'}{r_1}.
+  \]
+
+  This yields
+  \[
+    r_1 d' = r_2(d + d')
+    \quad \Longleftrightarrow \quad
+    (r_1 - r_2)d' = r_2 d,
+  \]
+  and therefore
+  \[
+    d' = \frac{r_2 d}{\,r_1 - r_2\,}.
+  \]
+
+  \paragraph{Trigonometric relation.}
+
+  From the right triangle in Figure~2,
+  \[
+    \sin\!\left(\frac{\alpha}{2}\right) = \frac{r_2}{d'}.
+  \]
+
+  Substituting the expression of $d'$ gives
+  \[
+    \sin\!\left(\frac{\alpha}{2}\right)
+    =
+    \frac{r_2}{\dfrac{r_2 d}{r_1 - r_2}}
+    =
+    \frac{r_1 - r_2}{d}.
+  \]
+
+  Hence,
+  \[
+    \frac{\alpha}{2}
+    =
+    \arcsin\!\left(\frac{r_1 - r_2}{d}\right).
+  \]
+
+  \paragraph{Angle relation.}
+
+  From the geometry of Figure~2,
+  \[
+    \pi = \frac{\pi}{2} + \frac{\alpha}{2} + \gamma,
+  \]
+  which implies
+  \[
+    \gamma = \frac{\pi}{2} - \frac{\alpha}{2}.
+  \]
+
+  \paragraph{Conclusion.}
+
+  Substituting the value of $\dfrac{\alpha}{2}$ yields
+  \[
+    \boxed{
+      \gamma
+      =
+      \frac{\pi}{2}
+      -
+      \arcsin\!\left(\frac{r_1 - r_2}{d}\right)
+    }.
+  \]
+
 \end{proof}
 
 \end{document}
