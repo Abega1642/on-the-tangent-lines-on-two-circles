@@ -1,0 +1,21 @@
+name: CI - Format
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  shellcheck:
+    name: Format check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        
+      - name: Run format check on all latex files.
+        run: ./tex-fmt --recursive src/ && git diff --exit-code
